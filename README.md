@@ -1,4 +1,4 @@
-# qb_skip_hash_check_script
+# Qbittorrent强制跳过校验python脚本
 
 python版本：3+
 
