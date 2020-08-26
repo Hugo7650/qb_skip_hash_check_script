@@ -19,8 +19,19 @@ python版本：3+
     
  - linux: `/home/<user>/.local/share/data/qBittorrent/BT_backup/`
 
+运行：
+
+ - `pip install python-qbitorrent` 安装依赖库
+ - 修改py文件添加上对应的参数
+ - 运行
+
 仅在windows上测试过
 
 原理：
 
-  通过webapi获取到要检查的种子，找到对应的种子文件，复制到当前文件夹，然后在qb上删除这个种子，再添加进去并跳过校验，最后删除当前文件夹下的副本
+ - 通过webapi获取到要检查的种子
+ - 找到对应的种子文件
+ - 复制到当前文件夹
+ - 在qb上删除这个种子
+ - 再添加进去并跳过校验
+ - 最后删除当前文件夹下的副本
