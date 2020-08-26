@@ -10,17 +10,17 @@ tmp_path = os.getcwd() + '/'
 qb = Client(qb_url)
 qb.login(qb_username, qb_password)
 torrents = qb.torrents()
-l=[]
-for i in torrents:
-     if i['state'] == 'checkingUP':
-         l.append(i)
-print('Get', len(l), 'torrents.')
-for i in l:
-    filename = i['hash']+'.torrent'
+check_torrents=[]
+for torrent in torrents:
+     if torrent['state'] == 'checkingUP':
+         check_torrents.append(torrent)
+print('Get', len(check_torrents), 'torrents.')
+for torrent in check_torrents:
+    filename = torrent['hash']+'.torrent'
     shutil.copy(qb_backup_path+filename, tmp_path)
-    qb.delete(i['hash'])
+    qb.delete(torrent['hash'])
     with open(tmp_path+filename,'rb') as f:
-        qb.download_from_file(f,save_path=i['save_path'],category=i['category'],skip_checking=True)
+        qb.download_from_file(f,save_path=torrent['save_path'],category=torrent['category'],skip_checking=True)
     os.remove(tmp_path+filename)
-    print('Force skip '+i['name'])
+    print('Force skip '+torrent['name'])
 print('Finished.')
