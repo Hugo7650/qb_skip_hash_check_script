@@ -6,17 +6,18 @@ python版本：3+
 
 参数：
 
-  qb_url：webui链接
+| 参数  | 说明 |
+| ------------- | ------------- |
+| qb_url  | webui链接  |
+| qb_username  | webui用户名  |
+| qb_password  | webui密码  |
+| qb_nackup_path  | qb备份的的种子文件夹路径  |
+
+备份路径：
   
-  qb_username：webui用户名
-  
-  qb_password：webui密码
-  
-  qb_nackup_path：qb备份的的种子文件夹路径
-  
-    windows: 'C:/Users/<user>/AppData/Local/qBittorrent/BT_backup/'
+ - windows: `C:/Users/<user>/AppData/Local/qBittorrent/BT_backup/`
     
-    linux: '/home/<user>/.local/share/data/qBittorrent/BT_backup/'
+ - linux: `/home/<user>/.local/share/data/qBittorrent/BT_backup/`
 
 仅在windows上测试过
 
