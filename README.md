@@ -9,7 +9,7 @@ python版本：3+
 | 参数  | 说明 |
 | ------------- | ------------- |
 | qb_url  | webui链接  |
-| qb_username  | webui用户名  |
+| qb_username  | webui用户名(本地跳过验证则留空)  |
 | qb_password  | webui密码  |
 | qb_nackup_path  | qb备份的的种子文件夹路径  |
 
@@ -24,6 +24,8 @@ python版本：3+
  - `pip install python-qbitorrent` 安装依赖库
  - 修改py文件添加上对应的参数
  - 运行
+
+请在本地环境/ssh后运行
 
 仅在windows上测试过
 
