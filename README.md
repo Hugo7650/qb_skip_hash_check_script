@@ -21,6 +21,7 @@ python版本：3+
 
 运行：
 
+ - `curl -O https://raw.githubusercontent.com/Hugo7650/qb_skip_hash_check_script/master/qb_skip.py` 下载脚本
  - `pip install python-qbitorrent` 安装依赖库
  - 修改py文件添加上对应的参数
  - 运行
